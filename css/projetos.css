@@ -1,0 +1,195 @@
+/* projetos.css */
+/* =================== SEÇÃO DE PROJETOS =================== */
+
+.projetos {
+    background: var(--card-bg);
+    padding: 8rem 2rem;
+    position: relative;
+  }
+  
+  .projetos-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* ---------- FILTROS ---------- */
+  .filtros-projetos {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .filtros-projetos button {
+    padding: 0.5rem 1.5rem;
+    border: none;
+    border-radius: 20px;
+    background: var(--card-bg);
+    color: var(--text-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+  }
+  
+  .filtros-projetos button:hover {
+    background: var(--accent-color);
+    color: var(--secondary-color);
+    transform: translateY(-2px);
+  }
+  
+  .filtro-ativo {
+    background: var(--accent-color) !important;
+    color: var(--secondary-color) !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* ---------- GRID DE PROJETOS ---------- */
+  .projetos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 4rem;
+  }
+  
+  .projeto-card {
+    background: var(--primary-color);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+  }
+  
+  .projeto-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* ---------- IMAGEM DO PROJETO ---------- */
+  .projeto-imagem {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .projeto-imagem img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 3px solid var(--accent-color);
+    transition: transform 0.3s ease;
+  }
+  
+  .projeto-card:hover .projeto-imagem img {
+    transform: scale(1.05);
+  }
+  
+  /* ---------- CONTEÚDO DO CARD ---------- */
+  .projeto-conteudo {
+    padding: 2rem;
+  }
+  
+  .projeto-descricao {
+    color: var(--text-color);
+    margin: 1rem 0;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    opacity: 0.9;
+  }
+  
+  /* ---------- TECNOLOGIAS ---------- */
+  .projeto-techs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 1rem 0;
+  }
+  
+  .projeto-techs span {
+    background: var(--card-bg);
+    color: var(--text-color);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+    border: 1px solid var(--accent-color);
+  }
+  
+  .projeto-techs span:hover {
+    transform: scale(1.05);
+    background: var(--accent-color);
+    color: var(--secondary-color);
+  }
+  
+  /* ---------- LINKS DO PROJETO ---------- */
+  .projeto-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+  
+  .projeto-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1.5rem;
+    background: linear-gradient(135deg, var(--accent-color), #b6f829);
+    color: var(--secondary-color);
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .projeto-link::after {
+    content: '';
+    position: absolute;
+    background: rgba(255, 255, 255, 0.2);
+    width: 50%;
+    height: 100%;
+    top: 0;
+    left: -50%;
+    transform: skewX(-30deg);
+    transition: left 0.6s ease;
+  }
+  
+  .projeto-link:hover {
+    box-shadow: 0 4px 12px rgba(103, 221, 10, 0.3);
+  }
+  
+  .projeto-link:hover::after {
+    left: 150%;
+  }
+  
+  /* ============= RESPONSIVIDADE ============= */
+  @media (max-width: 800px) {
+    .projetos {
+      padding: 4rem 1rem;
+    }
+    
+    .projetos-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .projeto-link {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .filtros-projetos {
+      gap: 0.5rem;
+    }
+    
+    .filtros-projetos button {
+      padding: 0.5rem 1rem;
+      font-size: 0.9rem;
+    }
+    
+    .projeto-conteudo {
+      padding: 1.5rem;
+    }
+  }

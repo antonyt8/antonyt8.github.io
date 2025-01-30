@@ -21,6 +21,7 @@
       <ul class="header-menu">
         <li><a href="#experiencia">Experiência</a></li>
         <li><a href="#formacao">Formação</a></li>
+        <li><a href="#projetos">Projetos</a></li>
         <li><a href="#contato">Contato</a></li>
       </ul>
     </nav>
@@ -100,7 +101,66 @@
     </div>
   </section>
 
-  
+          <!-- Projetos -->
+          <section class="projetos" id="projetos" aria-label="Projetos">
+            <div class="projetos-container">
+              <h2 class="subtitulo" data-anime="left">Projetos</h2>
+              <div class="filtros-projetos" data-anime="left">
+                <button class="filtro-ativo" data-filtro="todos">Todos</button>
+                <button data-filtro="mobile">Mobile</button>
+                <button data-filtro="backend">Backend</button>
+              </div>
+              <div class="projetos-grid">
+                <!-- Projeto 1 -->
+                <div class="projeto-card" data-categoria="mobile" data-anime="up">
+                  <div class="projeto-imagem">
+                    <img src="./img/perfil.jpg" alt="Projeto Quimera" loading="lazy">
+                  </div>
+                  <div class="projeto-conteudo">
+                    <h3>Quimera App</h3>
+                    <p class="projeto-descricao">Aplicativo de segurança pública desenvolvido em React Native com integração de APIs em Node.js.</p>
+                    <div class="projeto-techs">
+                      <span>React Native</span>
+                      <span>Node.js</span>
+                      <span>Firebase</span>
+                    </div>
+                    <div class="projeto-links">
+                      <a href="#" class="projeto-link" target="_blank" aria-label="Código no GitHub">
+                        <i class="fab fa-github"></i> Código
+                      </a>
+                      <a href="#" class="projeto-link" target="_blank" aria-label="Ver demonstração">
+                        <i class="fas fa-external-link-alt"></i> Demo
+                      </a>
+                    </div>
+                  </div>
+                </div>
+        
+                <!-- Projeto 2 -->
+                <div class="projeto-card" data-categoria="backend" data-anime="up">
+                  <div class="projeto-imagem">
+                    <img src="./img/perfil.jpg" alt="Sistema de Gestão" loading="lazy">
+                  </div>
+                  <div class="projeto-conteudo">
+                    <h3>Sistema de Gestão</h3>
+                    <p class="projeto-descricao">Dashboard administrativo com Flutter para mobile e backend em Node.js com relatórios em tempo real.</p>
+                    <div class="projeto-techs">
+                      <span>Flutter</span>
+                      <span>Node.js</span>
+                      <span>MongoDB</span>
+                    </div>
+                    <div class="projeto-links">
+                      <a href="#" class="projeto-link" target="_blank" aria-label="Código no GitHub">
+                        <i class="fab fa-github"></i> Código
+                      </a>
+                      <a href="#" class="projeto-link" target="_blank" aria-label="Ver demonstração">
+                        <i class="fas fa-external-link-alt"></i> Demo
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
 
   <footer class="footer" id="contato">
     <div class="footer-container">
@@ -114,6 +174,8 @@
           <li><i class="fas fa-envelope"></i> <a href="mailto:antony8thiago@gmail.com" >antony8thiago@gmail.com</a></li>
           <li><i class="fas fa-phone-alt"></i> <a href="https://wa.me/5582993161013" target="_blank" rel="noopener noreferrer">+55 82 99316-1013</a></li>
           <li><i class="fab fa-instagram"></i> <a href="https://www.instagram.com/antonyt_/" target="_blank" rel="noopener noreferrer">@antonyt_</a></li>
+          <li><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/seu-username/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+
         </ul>
         
         <!-- Formulário de Contato -->
@@ -139,7 +201,9 @@
       <p class="footer-copy">Antony Thiago. Alguns direitos reservados.</p>
     </div>
   </footer>
-  
+
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script src="./js/scripts.js"></script>
   <!-- Scripts -->
  <!-- <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
   <script>
