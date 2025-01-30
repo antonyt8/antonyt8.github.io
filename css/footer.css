@@ -1,0 +1,229 @@
+:root {
+  --primary-color: #000000;
+  --secondary-color: #ffffff;
+  --accent-color: #000000; 
+  --text-light: #cccccc;
+  --text-dark: #333333;
+  --form-bg: #1a1a1a;
+}
+
+.footer {
+  background: var(--primary-color);
+  color: var(--text-light);
+  padding: 4rem 1.25rem;
+  border-top: 2px solid var(--accent-color);
+}
+
+.footer-container {
+  max-width: 75rem;
+  margin: 0 auto;
+  display: grid;
+  gap: 2.5rem;
+  text-align: center;
+}
+
+.footer-texto {
+  font-size: 1.5rem;
+  line-height: 1.4;
+  max-width: 50ch;
+  margin: 0 auto;
+  padding-bottom: 2rem;
+}
+
+.footer-contato-container {
+  display: grid;
+  gap: 2rem;
+}
+
+.footer-contato {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-contato li {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1.25rem;
+  transition: transform 0.2s ease;
+}
+
+.footer-contato li:hover {
+  transform: translateX(5px);
+}
+
+.footer-contato a {
+  color: var(--secondary-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-contato a:hover {
+  color: var(--accent-color);
+}
+
+.footer-form-item {
+  margin-bottom: 1.5rem;
+}
+
+.footer-form-item label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  text-align: left;
+}
+
+.footer-form-item input,
+.footer-form-item textarea {
+  width: 100%;
+  padding: 0.875rem;
+  border: 2px solid var(--text-light);
+  border-radius: 8px;
+  background: var(--form-bg);
+  color: var(--secondary-color);
+  transition: border-color 0.3s ease;
+}
+
+.footer-form-item input:focus,
+.footer-form-item textarea:focus {
+  border-color: var(--accent-color);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(92, 107, 192, 0.25);
+}
+
+.footer-form-item button {
+  width: 100%;
+  padding: 1rem;
+  background: var(--accent-color);
+  color: var(--secondary-color);
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.footer-form-item button:hover {
+  background: #3f51b5;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(63, 81, 181, 0.3);
+}
+
+.footer-form-item button:active {
+  transform: translateY(0);
+}
+
+.footer-copy {
+  font-size: 0.875rem;
+  color: var(--text-light);
+  margin-top: 3rem;
+  opacity: 0.8;
+}
+.footer-form-item button {
+  width: 100%;
+  padding: 1rem;
+  background: var(--accent-color);
+  color: var(--secondary-color);
+  border: 2px solid var(--accent-color);
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(92, 107, 192, 0.3);
+}
+
+.footer-form-item button:hover {
+  background: #3f51b5;
+  transform: translateY(-4px);
+  box-shadow: 0 6px 15px rgba(63, 81, 181, 0.4);
+  opacity: 0.9;
+}
+
+.footer-form-item button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(63, 81, 181, 0.3);
+}
+
+.footer-form-item button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(92, 107, 192, 0.25);
+}
+
+.footer-form-item button:disabled {
+  background: #cccccc;
+  color: #666666;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+#button-enviar button {
+  padding: 1rem 2rem; /* Aumenta o espaçamento para dar mais ênfase */
+  background: var(--accent-color);
+  color: var(--secondary-color);
+  border: 2px solid var(--accent-color);
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 1.125rem; /* Tamanho de fonte ligeiramente maior */
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(87, 89, 100, 0.3);
+  text-transform: uppercase; /* Deixa o texto em maiúsculas */
+}
+
+#button-enviar button:hover {
+  background: #76798d;
+  transform: translateY(-4px);
+  box-shadow: 0 6px 15px rgba(63, 81, 181, 0.4);
+  opacity: 0.9;
+}
+
+#button-enviar button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(132, 135, 151, 0.3);
+}
+
+#button-enviar button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(92, 107, 192, 0.25);
+}
+
+#button-enviar button:disabled {
+  background: #cccccc;
+  color: #666666;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+
+@media (max-width: 800px) {
+  .footer {
+    padding: 3rem 1rem;
+  }
+
+  .footer-texto {
+    font-size: 1.25rem;
+  }
+
+  .footer-contato li {
+    font-size: 1.1rem;
+  }
+
+  .footer-form-item button {
+    padding: 0.875rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-contato li {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .footer-form-item input,
+  .footer-form-item textarea {
+    padding: 0.75rem;
+  }
+}
