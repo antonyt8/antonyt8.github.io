@@ -8,6 +8,10 @@
   <title>Antony Thiago - Desenvolvedor Full Stack</title>
   <meta name="description" content="Desenvolvedor Full Stack Localizado em Alagoas">
   <link rel="stylesheet" href="./css/style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <meta name="keywords" content="Desenvolvedor Full Stack, Antony Thiago, React Native, Node.js, Flutter">
+
+
 </head>
 
 <body>
@@ -107,27 +111,27 @@
       <div class="footer-contato-container">
         <!-- Contato -->
         <ul class="footer-contato">
-          <li><i class="fas fa-envelope"></i> <a href="mailto:antony8thiago@gmail.com">antony8thiago@gmail.com</a></li>
-          <li><i class="fas fa-phone-alt"></i> <a href="https://wa.me/5582993161013" target="_blank">+55 82 99316-1013</a></li>
-          <li><i class="fab fa-instagram"></i> <a href="https://www.instagram.com/antonyt_/" target="_blank">@antonyt_</a></li>
+          <li><i class="fas fa-envelope"></i> <a href="mailto:antony8thiago@gmail.com" >antony8thiago@gmail.com</a></li>
+          <li><i class="fas fa-phone-alt"></i> <a href="https://wa.me/5582993161013" target="_blank" rel="noopener noreferrer">+55 82 99316-1013</a></li>
+          <li><i class="fab fa-instagram"></i> <a href="https://www.instagram.com/antonyt_/" target="_blank" rel="noopener noreferrer">@antonyt_</a></li>
         </ul>
         
         <!-- Formulário de Contato -->
         <form id="contact-form">
           <div class="footer-form-item">
             <label for="name">Nome</label>
-            <input type="text" name="name" id="name" required>
+            <input type="text" name="name" id="name" placeholder="Digite seu nome" required>
           </div>
           <div class="footer-form-item">
             <label for="email">E-mail</label>
-            <input type="email" name="email" id="email" required>
+            <input type="email" name="email" id="email" placeholder="Digite seu email" required>
           </div>
           <div class="footer-form-item">
             <label for="message">Mensagem</label>
-            <textarea name="message" id="message" required></textarea>
+            <textarea name="message" id="message" placeholder="Digite sua mensagem" required></textarea>
           </div>
           <div id="button-enviar">
-            <button type="submit">Enviar Mensagem</button>
+            <button type="submit" title="Botão de Enviar" >Enviar Mensagem</button>
           </div>
           
         </form>
@@ -137,7 +141,7 @@
   </footer>
   
   <!-- Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+ <!-- <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
   <script>
     emailjs.init("2rg6zIkzEVdPYhO8a"); // Substitua pelo seu User ID real
   
@@ -155,7 +159,7 @@
           alert('Erro no envio. Tente novamente!');
         });
     });
-  </script>
+  </script> -->
   
 
 </body>
