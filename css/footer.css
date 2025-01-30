@@ -1,7 +1,7 @@
 :root {
   --primary-color: #000000;
   --secondary-color: #ffffff;
-  --accent-color: #000000; 
+  --accent-color: #000000;
   --text-light: #cccccc;
   --text-dark: #333333;
   --form-bg: #1a1a1a;
@@ -99,44 +99,16 @@
   padding: 1rem;
   background: var(--accent-color);
   color: var(--secondary-color);
-  border: none;
-  border-radius: 8px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.footer-form-item button:hover {
-  background: #3f51b5;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(63, 81, 181, 0.3);
-}
-
-.footer-form-item button:active {
-  transform: translateY(0);
-}
-
-.footer-copy {
-  font-size: 0.875rem;
-  color: var(--text-light);
-  margin-top: 3rem;
-  opacity: 0.8;
-}
-.footer-form-item button {
-  width: 100%;
-  padding: 1rem;
-  background: var(--accent-color);
-  color: var(--secondary-color);
   border: 2px solid var(--accent-color);
   border-radius: 8px;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 10px rgba(92, 107, 192, 0.3);
+  box-shadow: 0 4px 10px rgba(87, 89, 100, 0.3);
 }
 
 .footer-form-item button:hover {
-  background: #3f51b5;
+  background: #76798d;
   transform: translateY(-4px);
   box-shadow: 0 6px 15px rgba(63, 81, 181, 0.4);
   opacity: 0.9;
@@ -144,7 +116,7 @@
 
 .footer-form-item button:active {
   transform: translateY(0);
-  box-shadow: 0 2px 8px rgba(63, 81, 181, 0.3);
+  box-shadow: 0 2px 8px rgba(132, 135, 151, 0.3);
 }
 
 .footer-form-item button:focus {
@@ -160,17 +132,17 @@
 }
 
 #button-enviar button {
-  padding: 1rem 2rem; /* Aumenta o espaçamento para dar mais ênfase */
+  padding: 1rem 2rem;
   background: var(--accent-color);
   color: var(--secondary-color);
   border: 2px solid var(--accent-color);
   border-radius: 8px;
   font-weight: 600;
   cursor: pointer;
-  font-size: 1.125rem; /* Tamanho de fonte ligeiramente maior */
+  font-size: 1.125rem;
   transition: all 0.3s ease;
   box-shadow: 0 4px 10px rgba(87, 89, 100, 0.3);
-  text-transform: uppercase; /* Deixa o texto em maiúsculas */
+  text-transform: uppercase;
 }
 
 #button-enviar button:hover {
@@ -197,6 +169,12 @@
   box-shadow: none;
 }
 
+.footer-copy {
+  font-size: 0.875rem;
+  color: var(--text-light);
+  margin-top: 3rem;
+  opacity: 0.8;
+}
 
 @media (max-width: 800px) {
   .footer {
@@ -217,13 +195,42 @@
 }
 
 @media (max-width: 480px) {
+  .footer-container {
+    display: block;
+    padding: 1rem;
+  }
+
+  .footer-texto {
+    font-size: 1.1rem;
+    padding-bottom: 1rem;
+  }
+
+  .footer-contato-container {
+    display: block;
+  }
+
+  .footer-contato {
+    display: block;
+  }
+
   .footer-contato li {
+    font-size: 1rem;
+    margin-bottom: 1rem;
     flex-direction: column;
     gap: 0.5rem;
   }
-  
+
   .footer-form-item input,
   .footer-form-item textarea {
     padding: 0.75rem;
+  }
+
+  .footer-form-item button {
+    padding: 0.75rem;
+    font-size: 1rem;
+  }
+
+  .footer-copy {
+    font-size: 0.75rem;
   }
 }
