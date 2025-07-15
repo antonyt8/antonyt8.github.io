@@ -1,56 +1,57 @@
 .header {
   max-width: 1200px;
-  padding: 40px 20px;
+  padding: 48px 32px 24px 32px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background: transparent;
+  box-shadow: none;
 }
 
 .header-menu {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 24px;
   justify-content: center;
+  background: none;
+  box-shadow: none;
 }
 
 .header-menu a {
   font-size: 1.125rem;
   line-height: 1.3;
-  padding: 10px 20px;
+  padding: 8px 18px;
   text-decoration: none;
-  color: #000000; /* Texto em cinza escuro */
-  display: block;
+  color: #222;
+  background: none;
+  border: none;
+  border-radius: 8px;
+  transition: color 0.2s, background 0.2s, transform 0.2s;
   position: relative;
-  border: 2px solid transparent; /* Borda transparente inicialmente */
-  border-radius: 15px; /* Bordas mais arredondadas */
-  background: linear-gradient(45deg, transparent, transparent) padding-box, 
-              linear-gradient(45deg, #e9e9e9, #ffffff) border-box; /* Gradiente de borda cinza */
-  transition: all 0.3s ease; /* Transição suave */
+  overflow: hidden;
+}
+
+.header-menu a::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: #b6f829;
+  transition: width 0.3s, left 0.3s;
 }
 
 .header-menu a:hover {
-  color: #0e0e0e; /* Texto em branco ao passar o mouse */
-  background-color: #ffffff; /* Fundo escuro ao passar o mouse */
-  box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.3); /* Sombra sutil */
+  color: #b6f829;
+  background: rgba(182,248,41,0.08);
+  transform: translateY(-2px) scale(1.04);
 }
 
-.header-menu a::before {
-  content: '';
-  position: absolute;
+.header-menu a:hover::after {
   width: 100%;
-  height: 100%;
-  top: 0;
   left: 0;
-  background: linear-gradient(45deg, #dcdcdc, #888888); /* Gradiente de borda cinza */
-  border-radius: 30px; /* Bordas arredondadas também no efeito */
-  z-index: -1;
-  transform: scale(0); /* Inicialmente invisível */
-  transition: transform 0.3s ease; /* Efeito de expansão suave */
-}
-
-.header-menu a:hover::before {
-  transform: scale(1.1); /* Expansão da borda ao passar o mouse */
 }
 
 @media (max-width: 800px) {

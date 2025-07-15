@@ -1,33 +1,45 @@
-:root {
-  --primary-color: #000000;
-  --secondary-color: #ffffff;
-  --accent-color: #000000;
-  --text-light: #cccccc;
-  --text-dark: #333333;
-  --form-bg: #1a1a1a;
-}
-
 .footer {
   background: var(--primary-color);
   color: var(--text-light);
-  padding: 4rem 1.25rem;
+  padding: 3rem 1.25rem 2rem 1.25rem;
   border-top: 2px solid var(--accent-color);
+  animation: fadeIn 1.2s 0.5s cubic-bezier(.4,0,.2,1) both;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 -2px 24px 0 rgba(0,0,0,0.10);
 }
 
 .footer-container {
   max-width: 75rem;
   margin: 0 auto;
   display: grid;
+  grid-template-columns: 1fr 2fr;
   gap: 2.5rem;
-  text-align: center;
+  align-items: start;
+  text-align: left;
+  position: relative;
+  z-index: 1;
+}
+
+.footer-texto-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 100%;
+  text-align: left;
 }
 
 .footer-texto {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   line-height: 1.4;
   max-width: 50ch;
   margin: 0 auto;
-  padding-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  animation: slideUp 1.1s 0.6s cubic-bezier(.4,0,.2,1) both;
+}
+
+.subtitulo {
+  text-shadow: 0 0 16px #b6f829cc, 0 2px 8px #000a;
 }
 
 .footer-contato-container {
@@ -47,12 +59,14 @@
   display: inline-flex;
   align-items: center;
   gap: 0.75rem;
-  font-size: 1.25rem;
-  transition: transform 0.2s ease;
+  font-size: 1.1rem;
+  transition: transform 0.2s, color 0.2s;
+  animation: fadeIn 1.2s 0.7s cubic-bezier(.4,0,.2,1) both;
 }
 
 .footer-contato li:hover {
-  transform: translateX(5px);
+  transform: translateX(6px) scale(1.04);
+  color: #b6f829;
 }
 
 .footer-contato a {
@@ -143,6 +157,7 @@
   transition: all 0.3s ease;
   box-shadow: 0 4px 10px rgba(87, 89, 100, 0.3);
   text-transform: uppercase;
+  animation: scaleIn 0.8s 1s cubic-bezier(.4,0,.2,1) both;
 }
 
 #button-enviar button:hover {
@@ -174,6 +189,166 @@
   color: var(--text-light);
   margin-top: 3rem;
   opacity: 0.8;
+}
+
+.glass-contact {
+  background: var(--primary-color);
+  box-shadow: 0 4px 32px 0 rgba(31,38,135,0.10);
+  border-radius: 18px;
+  padding: 2.2rem 1.5rem 1.5rem 1.5rem;
+  margin: 0 auto 2rem auto;
+  max-width: 370px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 1.2rem;
+  border: 1.5px solid #b6f82933;
+  animation: fadeIn 1.2s 0.7s cubic-bezier(.4,0,.2,1) both;
+  backdrop-filter: none;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.glass-contact form {
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.glass-contact .footer-form-item input,
+.glass-contact .footer-form-item textarea {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.footer-social {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  margin: 2.2rem 0 0.2rem 0;
+  z-index: 2;
+}
+
+.social-icon {
+  font-size: 2.1rem;
+  color: var(--accent-color);
+  background: none;
+  border-radius: 50%;
+  padding: 0.3rem;
+  box-shadow: 0 0 8px #b6f82933;
+  transition: color 0.2s, transform 0.2s, box-shadow 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: drop-shadow(0 0 6px #b6f82944);
+}
+
+.social-icon:hover {
+  color: #fff;
+  transform: scale(1.22) translateY(-2px);
+  box-shadow: 0 0 24px #b6f829cc, 0 0 8px #67dd0a99;
+  filter: drop-shadow(0 0 12px #b6f829cc);
+}
+
+.glass-contact .footer-contato {
+  margin-bottom: 0.5rem;
+  width: 100%;
+  justify-content: flex-start;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.3rem;
+}
+
+.glass-contact .footer-contato li {
+  color: #b6f829;
+  font-size: 1rem;
+  margin-bottom: 0.1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+  text-shadow: 0 0 6px #b6f82955;
+}
+
+.glass-contact .footer-form-item {
+  width: 100%;
+  margin-bottom: 1.2rem;
+}
+
+.glass-contact .footer-form-item label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-weight: 500;
+  color: var(--text-light);
+}
+
+.glass-contact .footer-form-item input,
+.glass-contact .footer-form-item textarea {
+  width: 100%;
+  background: transparent;
+  border: 1.5px solid #444;
+  color: var(--text-light);
+  font-size: 1rem;
+  border-radius: 8px;
+  padding: 0.9rem 1.1rem;
+  margin-bottom: 0.2rem;
+  transition: border 0.2s, box-shadow 0.2s;
+  box-shadow: none;
+  outline: none;
+  resize: vertical;
+}
+
+.glass-contact .footer-form-item input:focus,
+.glass-contact .footer-form-item textarea:focus {
+  border: 2px solid var(--accent-color);
+  box-shadow: 0 0 0 2px #b6f82933;
+}
+
+#button-enviar {
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+#button-enviar button {
+  min-width: 180px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  border-radius: 8px;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 8px rgba(182,248,41,0.08);
+  border: none;
+  background: var(--accent-color);
+  color: var(--primary-color);
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+}
+#button-enviar button:hover {
+  background: #67dd0a;
+  color: #fff;
+  transform: scale(1.04);
+}
+
+@media (max-width: 900px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    text-align: center;
+  }
+  .footer-texto-container {
+    justify-content: center;
+    text-align: center;
+  }
+  .footer-social {
+    gap: 1rem;
+    margin: 1.5rem 0 0.2rem 0;
+  }
+  .social-icon {
+    font-size: 1.4rem;
+    padding: 0.15rem;
+  }
 }
 
 @media (max-width: 800px) {
@@ -233,4 +408,122 @@
   .footer-copy {
     font-size: 0.75rem;
   }
+}
+
+@media (max-width: 600px) {
+  .glass-contact {
+    padding: 1rem 0.2rem 1rem 0.2rem;
+    max-width: 98vw;
+    border-radius: 10px;
+  }
+  .footer-social {
+    gap: 0.5rem;
+    margin: 1rem 0 0.2rem 0;
+  }
+  .social-icon {
+    font-size: 1.1rem;
+    padding: 0.1rem;
+  }
+  .glass-contact .footer-form-item input,
+  .glass-contact .footer-form-item textarea {
+    font-size: 0.98rem;
+    padding: 0.7rem 0.7rem;
+  }
+  #button-enviar button {
+    min-width: 120px;
+    padding: 0.8rem 1.2rem;
+    font-size: 0.98rem;
+  }
+}
+
+body.dark .glass-contact {
+  background: var(--primary-color);
+  border: 1.5px solid #b6f82933;
+}
+body.dark .footer-social .social-icon {
+  background: rgba(24,26,27,0.6);
+  color: #b6f829;
+}
+body.dark .footer-social .social-icon:hover {
+  background: #b6f829;
+  color: #181a1b;
+}
+body.dark .glass-contact .footer-form-item input,
+body.dark .glass-contact .footer-form-item textarea {
+  background: rgba(24,26,27,0.7);
+  color: #f8f8f8;
+  border: 1px solid #444;
+}
+body.dark #button-enviar button {
+  background: linear-gradient(90deg, #b6f829 60%, #67dd0a 100%);
+  color: #181a1b;
+  box-shadow: 0 2px 16px #b6f82933, 0 0 8px #67dd0a22;
+}
+body.dark #button-enviar button:hover {
+  background: linear-gradient(90deg, #67dd0a 60%, #b6f829 100%);
+  color: #181a1b;
+}
+
+body:not(.dark) .social-icon {
+  color: #67dd0a;
+  filter: drop-shadow(0 0 6px #b6f82933);
+}
+body:not(.dark) .social-icon:hover {
+  color: #181a1b;
+  background: #b6f829;
+  box-shadow: 0 0 16px #b6f82999;
+}
+
+.footer-texto, .footer-copy {
+  color: var(--text-light);
+}
+body.dark .footer-texto, body.dark .footer-copy {
+  color: #f8f8f8;
+}
+body:not(.dark) .footer-texto, body:not(.dark) .footer-copy {
+  color: #181a1b;
+}
+.glass-contact .footer-contato li,
+.glass-contact .footer-form-item input,
+.glass-contact .footer-form-item textarea {
+  color: var(--text-light);
+}
+body:not(.dark) .glass-contact .footer-contato li,
+body:not(.dark) .glass-contact .footer-form-item input,
+body:not(.dark) .glass-contact .footer-form-item textarea {
+  color: #181a1b;
+}
+
+body:not(.dark) #button-enviar button {
+  background: linear-gradient(90deg, #b6f829 60%, #67dd0a 100%);
+  color: #181a1b;
+  box-shadow: 0 2px 16px #b6f82933, 0 0 8px #67dd0a22;
+}
+body:not(.dark) #button-enviar button:hover {
+  background: linear-gradient(90deg, #67dd0a 60%, #b6f829 100%);
+  color: #181a1b;
+}
+body:not(.dark) .glass-contact {
+  background: var(--primary-color);
+  border: 1.5px solid #b6f82933;
+}
+body:not(.dark) .footer-texto, body:not(.dark) .footer-copy {
+  color: #181a1b;
+}
+body.dark .footer-texto, body.dark .footer-copy {
+  color: #f8f8f8;
+}
+
+body.dark .social-icon {
+  color: #b6f829;
+  filter: drop-shadow(0 0 6px #b6f82944);
+}
+body.dark .social-icon:hover {
+  color: #fff;
+  box-shadow: 0 0 24px #b6f829cc, 0 0 8px #67dd0a99;
+  filter: drop-shadow(0 0 12px #b6f829cc);
+}
+body.dark .subtitulo {
+  color: #f8f8f8;
+  text-shadow: 0 0 16px #b6f829cc, 0 2px 8px #000a;
 }

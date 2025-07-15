@@ -5,12 +5,14 @@
 
 .formacao-container {
   max-width: 1200px;
-  padding: 120px 20px;
+  padding: 80px 20px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 2fr;
-  gap: 100px;
+  gap: 80px;
   position: relative;
+  background: transparent;
+  animation: fadeIn 1.2s 0.3s cubic-bezier(.4,0,.2,1) both;
 }
 
 .formacao-container::after {
@@ -30,11 +32,12 @@
 }
 
 .formacao-texto {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   line-height: 1.33;
   max-width: 40ch;
-  margin-bottom: 60px;
+  margin-bottom: 48px;
   color: #a3a3a3;
+  animation: fadeIn 1.2s 0.4s cubic-bezier(.4,0,.2,1) both;
 }
 
 .formacao-texto strong {
