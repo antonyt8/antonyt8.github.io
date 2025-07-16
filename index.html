@@ -132,22 +132,22 @@
             <li><i class="fas fa-envelope"></i> <a href="mailto:antony8thiago@gmail.com">antony8thiago@gmail.com</a></li>
             <li><i class="fas fa-phone-alt"></i> <a href="https://wa.me/5582993161013" target="_blank" rel="noopener noreferrer">+55 82 99316-1013</a></li>
           </ul>
-          <form id="contact-form" aria-label="Formulário de contato">
+          <form id="contact-form" action="https://formspree.io/f/xrbekgne" method="POST">
             <div id="form-feedback" aria-live="polite" style="min-height:32px;margin-bottom:8px;"></div>
             <div class="footer-form-item">
               <label for="name">Nome</label>
-              <input type="text" name="name" id="name" placeholder="Digite seu nome" required autocomplete="name">
+              <input type="text" name="name" id="name" required>
             </div>
             <div class="footer-form-item">
               <label for="email">E-mail</label>
-              <input type="email" name="email" id="email" placeholder="Digite seu email" required autocomplete="email">
+              <input type="email" name="email" id="email" required>
             </div>
             <div class="footer-form-item">
               <label for="message">Mensagem</label>
-              <textarea name="message" id="message" placeholder="Digite sua mensagem" required></textarea>
+              <textarea name="message" id="message" required></textarea>
             </div>
             <div id="button-enviar">
-              <button type="submit" title="Botão de Enviar">Enviar Mensagem</button>
+              <button type="submit">Enviar Mensagem</button>
             </div>
           </form>
         </div>
@@ -168,9 +168,7 @@
   <script src="js/lang.js"></script>
   <script src="js/theme.js"></script>
   <script src="js/scroll-reveal.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
-  <script src="js/form.js"></script>
-
+  <script src="js/formspree-feedback.js"></script>
 </body>
 
 </html>
