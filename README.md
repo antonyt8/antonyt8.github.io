@@ -35,4 +35,4 @@ Portfólio pessoal moderno, responsivo, com dark mode, animações e formulário
 
 ## Créditos
 - Desenvolvido por Antony Thiago
-- Design, animações e integração por Antony Thiago e IA (ChatGPT) 
+- Design, animações e integração por Antony Thiago
